@@ -326,7 +326,26 @@ body {
 								<a href="#" class="notification"><i class="fa fa-bell-o" style="font-size:20px"></i><span class="badge">1</span></a>
 						
 							<div class="dropdown-content">
-  <a href="transfersupply_record.php?mem_id=<?php echo $fetch['mem_id']?>">Records</a>
+
+
+
+              <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Records</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmasds" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to ASDS</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmhrmo" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to HRMO</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmsds" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to SDS</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmsgod" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to SGOD</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmcid" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to CID</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmdpsu" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to DPSU</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmsupply" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Supply</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmcashier" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Cashier</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmbudget" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Budget</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmacct" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Accounting</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmlegal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Legal</button>
+
+
+
+
+ <!-- <a href="transfersupply_record.php?mem_id=<?php echo $fetch['mem_id']?>">Records</a>
   <a href="transfersupply_hrmo.php?mem_id=<?php echo $fetch['mem_id']?>">HRMO</a>
     <a href="transfersupply_sds.php?mem_id=<?php echo $fetch['mem_id']?>">SDS</a>
     <a href="transfersupply_asds.php?mem_id=<?php echo $fetch['mem_id']?>">ASDS</a>
@@ -337,7 +356,7 @@ body {
 	<a href="transfersupply_cashier.php?mem_id=<?php echo $fetch['mem_id']?>">Cashier</a>
     <a href="transfersupply_budget.php?mem_id=<?php echo $fetch['mem_id']?>">Budget</a>
 	<a href="transfersupply_acct.php?mem_id=<?php echo $fetch['mem_id']?>">Accounting</a>
-    <a href="transfersupply_legal.php?mem_id=<?php echo $fetch['mem_id']?>">Legal</a>
+    <a href="transfersupply_legal.php?mem_id=<?php echo $fetch['mem_id']?>">Legal</a>-->
   </div>
 </div>
 
@@ -352,7 +371,285 @@ body {
 
 <td>
 <a href="edit_supply.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-edit" style="font-size:16px;color:Blue"><font size="4"><B>Update</B></font></i></a>
-							
+			
+
+
+<!--records-->
+
+<div class="modal fade" id="modal_confirm" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to Records </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to Records?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_record.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<!--asds-->
+
+<div class="modal fade" id="modal_confirmasds" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to ASDS </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to ASDS?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_asds.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!--hrmo-->
+
+<div class="modal fade" id="modal_confirmhrmo" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to HRMO </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to HRMO?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_hrmo.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!--sds-->
+
+<div class="modal fade" id="modal_confirmsds" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to SDS </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to SDS?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_sds.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+<!--sgod-->
+
+<div class="modal fade" id="modal_confirmsgod" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to SGOD </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to SGOD?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_sgod.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!--CID-->
+
+<div class="modal fade" id="modal_confirmcid" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to CID </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to CID?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_cid.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!--dpsu-->
+
+<div class="modal fade" id="modal_confirmdpsu" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to DPSU </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to DPSU?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_dpsu.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<!--supply-->
+
+<div class="modal fade" id="modal_confirmsupply" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to supply </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to Supply?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_supply.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<!--cashier-->
+
+<div class="modal fade" id="modal_confirmcashier" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to Cashier </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to Cashier?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_cashier.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<!--budget-->
+
+<div class="modal fade" id="modal_confirmbudget" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to Budget </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to Budget?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_budget.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+<!--acct-->
+
+<div class="modal fade" id="modal_confirmacct" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to Accounting </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to Accounting?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_acct.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+<!--legal-->
+
+<div class="modal fade" id="modal_confirmlegal" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Transfer data to Legal </h3>
+    </div>
+    <div class="modal-body">
+        <center><h4>Are you sure you want to transfer data to Legal?</h4></center>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+        <a type="button" class="btn btn-success" href="transfersupply_legal.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 								
 				 	</td>
 
